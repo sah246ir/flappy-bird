@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="game">
+        <img class="bird" src="bird.png" alt="">
+        <p class="starter-msg">Press spacebar to start the game</p>
+        <div class="pipe">
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+        <h1 class="score">0</h1>
+    </div>
+
+
+    <dialog id="gameOverDialog">
+        <div class="dialog-content">
+            <h2>Game Over!</h2>
+            <p>Your Score: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">Restart</button>
+            <button onclick="closeDialog()">Close</button>
+        </div>
+    </dialog>
+
+    <style>
+        
+    </style>
+</body>
+
+</html>

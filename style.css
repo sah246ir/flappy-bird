@@ -1,0 +1,125 @@
+body{
+    background-color: green;
+    overflow: hidden;
+}
+
+.game{
+    width: 100vw;
+    height:100vh;
+    position: relative;
+}
+
+.bird{
+    width: 50px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 50%;
+    bottom:50%;
+    transform: translate(-50%,-50%);
+}
+
+.starter-msg{
+    position: absolute;
+    color: white;
+    left: 50%;
+    bottom:45%;
+    transform: translate(-50%,-50%);
+    animation: Blink 0.5s infinite alternate;
+}
+
+.pipe{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    position: absolute;
+    right: 25px;
+}
+.pipe>div{
+    background-color: greenyellow;
+    width: 55px;
+}
+
+.top{
+    height: 55%;
+}
+.bottom{
+    height: 25%;
+}
+
+.score{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 5ch;
+}
+
+dialog {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.dialog-content h2 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.dialog-content p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dialog-content button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dialog-content button:first-child {
+    background-color: #28a745;
+    color: white;
+}
+
+.dialog-content button:last-child {
+    background-color: #dc3545;
+    color: white;
+}
+
+.dialog-content button:hover {
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Blink {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
