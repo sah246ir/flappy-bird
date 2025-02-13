@@ -102,22 +102,19 @@ function startGame (){
     }
     
     window.addEventListener("keydown", KeyHandler);
-    
-    
     function showGameOver(score) {
         document.getElementById("finalScore").innerText = score;
         document.getElementById("gameOverDialog").showModal();
     }
-    
-    function restartGame() {
-        location.reload(); // Reload the page to restart the game
-    }
-    
-    function closeDialog() {
-        document.getElementById("gameOverDialog").close();
-    }
 }
 
+function closeDialog() {
+        document.getElementById("gameOverDialog").close();
+    }
+
+function restartGame() {
+   location.reload(); // Reload the page to restart the game
+}
 function gamestarter(e) {
     if (!gamestarted && (e.keyCode == 38 || e.keyCode == 32)) {
         document.querySelector(".starter-msg").style.display="none"
